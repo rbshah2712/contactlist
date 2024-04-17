@@ -1,0 +1,84 @@
+/* contact.component.css */
+
+.container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Subtle background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker text for better contrast */
+  }
+  
+  form {
+    display: flex; /* Align buttons horizontally */
+    flex-direction: column; /* Stack fields vertically */
+    gap: 10px; /* Small spacing between elements */
+  }
+  
+  input[type="text"],
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Smooth hover transitions */
+  }
+  
+  input[type="text"] {
+    background-color: #fff; /* Light background for text input */
+  }
+  
+  button:hover {
+    opacity: 0.8; /* Subtle hover effect */
+  }
+  
+  .btn-success,
+  .btn-primary {
+    background-color: #1de04a; /* Green for both success and primary */
+  }
+  
+  .btn-secondary {
+    background-color: #ccc;
+  }
+  
+  .btn-danger {
+    background-color: #d9534f; /* More prominent red for danger */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between; /* Align text and buttons */
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: default; /* Remove pointer cursor */
+  }
+  
+  .list-group-item:hover {
+    background-color: #f5f5f5; /* Subtle hover effect for list items */
+  }
+  
+  .btn-danger {
+    margin-left: 0; /* Align delete button to the right */
+    align-items: center;
+    margin-left: 0;
+  }
+  
+  .btn:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  }

@@ -1,0 +1,27 @@
+<!-- items.component.html -->
+<div class="container">
+    <h2>{{ isEditMode ? 'Edit' : 'Create' }} Contact</h2>
+    <form (ngSubmit)="editOrUpdateContact()" class="mb-4">
+     <input type="text"  [(ngModel)]="newContact.firstname" name="firstname" placeholder="First Name" class="form-control mb-2">
+     <input type="text"  [(ngModel)]="newContact.lastname" name="lastname" placeholder="Last Name" class="form-control mb-2">
+     <input type="text"  [(ngModel)]="newContact.phonenumber" name="phonenumber" placeholder="Phone Number" class="form-control mb-2"> 
+    <button type="submit" class="btn btn-success">{{ isEditMode ? 'Update' : 'Create' }}</button>
+    <button *ngIf="isEditMode" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+    </form>
+  
+    <h2>Contact List</h2>
+    <ul class="list-group">
+      <li *ngFor="let item of contacts" class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          {{ item.firstname }} - {{ item.lastname }}
+        </div>
+        <div>
+            {{ item.phonenumber }}
+          </div>
+        <div>
+          <button (click)="deleteContact(item._id)" class="btn btn-danger">Delete</button>
+          <button (click)="editContact(item)" class="btn btn-primary">Edit</button>
+        </div>
+      </li>
+    </ul>
+  </div>
